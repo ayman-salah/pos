@@ -1,0 +1,13 @@
+[{
+  "id": 1,
+  "name": "store_1",
+  "address": "8685 Ridgeview Junction"
+},{
+  "id": 2,
+  "name": "store_2",
+  "address": "47559 Mosinee Road"
+}, {
+  "id": 3,
+  "name": "store_3",
+  "address": "81 Crownhardt Lane"
+}]

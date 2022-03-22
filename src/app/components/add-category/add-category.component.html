@@ -1,0 +1,49 @@
+<div class="add-cat">
+  <div class="my-container">
+    <div class="add-cat__header">
+      <h3>categories</h3>
+      <P>
+        <a routerLink="/"><i class="fa-solid fa-gauge"></i> home</a>
+        <span> > add category</span>
+      </P>
+
+    </div>
+    <div class="add-cat__box-container">
+      <p>Please enter data of category you want to add </p>
+      <!-- start form to add category  -->
+      <form>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">category name</label>
+          <input type="text" class="form-control" placeholder="category name" [(ngModel)]="cat_name" name="first">
+          <button *ngIf="cat_name" clase="clear"  mat-icon-button (click)="cat_name = ''">
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">category</label>
+          <input type="text" class="form-control"  placeholder="category name">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">aty</label>
+          <input type="text" class="form-control"  placeholder="Quantity">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">cost</label>
+          <input type="text" class="form-control"  placeholder="category cost">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">price</label>
+          <input type="text" class="form-control"  placeholder="category price">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">notes</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <button type="button" class="btn btn-success">save</button>
+      </form>
+      <!-- end form add category  -->
+    </div>
+  </div>
+
+</div>

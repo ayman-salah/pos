@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "image": "./assets/images/products/product-1.jpg",
+    "name": "banana",
+    "category": "fruits",
+    "qty": 36,
+    "cost": 57,
+    "price": 62
+  },
+  {
+    "id": 2,
+    "image": "./assets/images/products/product-2.jpg",
+    "name": "watermelon",
+    "category": "fruits",
+    "qty": 35,
+    "cost": 47,
+    "price": 52
+  },
+  {
+    "id": 3,
+    "image": "./assets/images/products/product-3.jpg",
+    "name": "grapes",
+    "category": "fruits",
+    "qty": 37,
+    "cost": 62,
+    "price": 67
+  }
+]

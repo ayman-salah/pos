@@ -1,0 +1,36 @@
+<div class="add-stores">
+  <div class="my-container">
+    <div class="add-stores__header">
+      <h3>Add stores</h3>
+      <P>
+        <a routerLink="/"><i class="fa-solid fa-gauge"></i> home</a>
+        <span> > add stores</span>
+      </P>
+    </div>
+    <div class="add-stores__box-container">
+      <p>Please enter data of stores you want to add </p>
+      <!-- start form to add stores  -->
+      <form action="" #f="ngForm">
+        <div class="form-group">
+          <label> name</label>
+          <input type="text" #_name="ngModel" ngModel name="_name" class="form-control" required minlength="3">
+          <p class="alert alert-danger" *ngIf="_name.touched && _name.errors?.['required']">name is required</p>
+          <p class="alert alert-danger" *ngIf="_name.touched && _name.errors?.['minlength']">min Lnegth is 3 char</p>
+        </div>
+
+
+        <div class="form-group">
+          <label> address </label>
+          <input type="text" #address="ngModel" ngModel name="address" class="form-control" required minlength="3">
+          <p class="alert alert-danger" *ngIf="address.touched && address.errors?.['required']">address is required</p>
+          <p class="alert alert-danger" *ngIf="address.touched && address.errors?.['minlength']">min Lnegth is 3 char</p>
+        </div>
+        <button (click)="save(f)" type="button" [disabled]="f.invalid" class="btn btn-success">ok</button>
+      </form>
+
+      <!-- end form add stores  -->
+
+    </div>
+  </div>
+
+</div>

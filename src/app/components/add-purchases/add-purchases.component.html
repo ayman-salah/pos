@@ -1,0 +1,55 @@
+<div class="add-purchase">
+  <div class="my-container">
+    <div class="add-purchase__header">
+      <h3>Add purchase</h3>
+      <P>
+        <a routerLink="/"><i class="fa-solid fa-gauge"></i> home</a>
+        <span> > add purchase</span>
+      </P>
+    </div>
+    <div class="add-purchase__box-container">
+      <p>Please enter data of purchase you want to add </p>
+      <!-- start form to add purchase  -->
+      <form action="" #f="ngForm">
+        <div class="row">
+          <div class="form-group col-md-6 col-sm-12 ">
+            <label for="birthday">date:</label><br/>
+            <input type="date" id="birthday" name="birthday">
+          </div>
+          <div class="form-group col-md-6 col-sm-12 ">
+            <label>Reference</label>
+            <input type="text" #first_name="ngModel" ngModel name="first_name" class="form-control" required minlength="3">
+            <p class="alert alert-danger" *ngIf="first_name.touched && first_name.errors?.['required']">first name is required</p>
+            <p class="alert alert-danger" *ngIf="first_name.touched && first_name.errors?.['minlength']">min Lnegth is 3 char</p>
+          </div>
+          <div class="form-group col-sm-12 ">
+            <input type="text" #search="ngModel" ngModel name="search" class="form-control" placeholder="search product by code or name,you can scan barcode too" >
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6 col-sm-12">
+            <label> status </label>
+             <select class="form-select" aria-label="Default select example">
+            <option selected value="active">active</option>
+            <option value="Inactive">Inactive</option>
+          </select>
+          </div>
+         <div class="form-group col-md-6 col-sm-12">
+          <label> group </label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected value="admin">admin</option>
+            <option value="staff">staff</option>
+            <option value="purchase">purchase</option>
+          </select>
+         </div>
+        </div>
+
+        <button  type="button" [disabled]="f.invalid" class="btn btn-success">ok</button>
+      </form>
+
+      <!-- end form add purchase  -->
+
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,202 @@
+.list-products {
+  .my-container {
+    width: 95%;
+    margin: auto;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0rem;
+
+    h3 {
+      font-size: 1.8rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0rem;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+    p {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin: 0rem;
+      color: #898989;
+      a {
+        color: #898989;
+      }
+    }
+  }
+  &__box-container {
+    background-color: #21ff0012;
+    padding: 1rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-top: 4px solid #617fc3;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    h5 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    &__link-container {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 1.2rem;
+      a {
+        width: 11rem;
+        height: 8rem;
+        color: #000;
+        font-size: 1.5rem;
+        border: 1px solid #d1d1d1;
+        margin: 0 0 1rem 1rem;
+        text-align: center;
+        padding-top: 1.2rem;
+        background-color: #ecf0f5;
+        box-shadow: 1px 1px 3px #5ca5c14a;
+      }
+    }
+    &__link-container {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 1.2rem;
+      a {
+        width: 11rem;
+        height: 8rem;
+        color: #000;
+        font-size: 1.5rem;
+        border: 1px solid #d1d1d1;
+        margin: 0 0 1rem 1rem;
+        text-align: center;
+        padding-top: 1.2rem;
+        background-color: #ecf0f5;
+        box-shadow: 1px 1px 3px #5ca5c14a;
+
+      }
+    }
+    &__operations {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      & > div {
+       &:nth-child(1){
+         width: 40rem;
+         mat-form-field{
+           width: 100%;
+         }
+        }
+        &:nth-child(2) {
+          width: 41rem;
+          display: flex;
+          justify-content: flex-end;
+          @media (max-width: 880px) {
+            width: 100%;
+            justify-content: flex-start;
+          }
+          button {
+            width: 9rem;
+            border: none;
+            margin: 1rem 0.5rem;
+            padding: 0.7rem;
+            font-size: 1.5rem;
+            color: rgb(0, 0, 0);
+            background-color: transparent;
+            border-radius: 3px;
+            border: 1px solid #ddd;
+            font-weight: bold;
+            letter-spacing: 1px;
+            @media (max-width: 768px) {
+              font-size: 1.8rem;
+              padding: 1rem;
+            }
+            &:hover{
+              background-color: rgb(204, 202, 202);
+            }
+            &:nth-child(2) {
+              color: #3f51b5;
+            }
+
+            &:nth-child(3) {
+              color: #e73b7f;
+            }
+            &:nth-child(4) {
+              color: #009688;
+            }
+            i {
+              margin-right: 0.7rem;
+            }
+          }
+        }
+      }
+    }
+    &__table-content {
+      overflow: hidden;
+      .mat-form-field {
+        width: 100%;
+
+      }
+
+      table {
+        overflow-x: scroll;
+        tr {
+          font-size: 1.4rem;
+          text-align: left;
+          height: 4.4rem;
+          border-bottom: 0.5px solid #dbdada;
+          th {
+            font-size: 1.5rem;
+            border: 1px solid rgba(35, 72, 190, 0.774);
+            width: calc(100% / 6);
+            padding-left: 1rem;
+            background-color: rgb(0, 0, 0);
+            color: #FFF;
+            &:last-child{
+              text-align: center;
+            }
+          }
+          td {
+            padding-left: 1rem;
+            width: calc(100% / 7);
+            img{
+              object-fit: cover;
+              width: 5rem;
+              height: 5rem;
+              border-radius: 5px;
+              margin: 0.4rem;
+            }
+            &:last-child{
+              text-align: center;
+              a{
+                &.delete{
+                  color: red;
+                }
+                i{
+                  margin-right: .5rem;
+                }
+              }
+            }
+
+          }
+        }
+
+      }
+      mat-table {
+        max-width: 100%;
+        @media (max-width:678px) {
+          overflow-x: auto;
+        }
+      }
+
+    }
+  }
+}

@@ -1,0 +1,28 @@
+<div class="login">
+  <form>
+    <div class="mb-3 row ">
+      <label for="inputPassword" class="col-sm-2 col-form-label">Email > ahmed@gmail.com</label>
+      <div class="col-sm-10 login-input">
+        <input
+        type="Email" class="form-control"
+        id="inputPassword" placeholder="Example@gamil.com"
+        [(ngModel)]="email" name="Email">
+        <i class="fa-solid fa-xmark" *ngIf="email" (click)="email = ''"></i>
+      </div>
+    </div>
+
+    <div class="mb-3 row ">
+      <label for="Email-id" class="col-sm-2 col-form-label">Password >> 1111</label>
+      <div class="col-sm-10 login-input">
+        <input
+        type="password" class="form-control"
+        id="Email-id" placeholder="password"
+        [(ngModel)]="password"  name="Email">
+        <i class="fa-solid fa-xmark" *ngIf="password" (click)="password = ''"></i>
+      </div>
+    </div>
+    <button class="btn btn-success" (click)="login()">ok</button>
+  </form>
+    <img src="assets/images/login.jpg" alt="" srcset="">
+  <div class="overlay"></div>
+</div>

@@ -1,0 +1,204 @@
+.pos {
+  display: flex;
+  flex-wrap: wrap;
+  border: 0.2px solid;
+  width: 100%;
+  padding: 1.2rem;
+  @media (max-width: 675px) {
+    flex-direction: column-reverse;
+  }
+  & > div {
+    width: 47%;
+    margin-right: 1rem;
+    @media (max-width: 675px) {
+      width: 100%;
+    }
+  }
+  &__invoic {
+    border: 1px solid #e3e3e3;
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 3px;
+    width: 40%;
+
+    &--input {
+      width: 100%;
+      font-size: 1.4rem;
+      padding: 1.4rem 1rem;
+      border: 1px solid #d2d6de;
+      margin: 1rem 0rem;
+    }
+    &--table {
+      width: 100%;
+      margin-bottom: 2rem;
+      &--thead {
+        background-color: #dff0d8;
+        text-align: center;
+        &--tr {
+          border-bottom: 1px solid #bdbdbd;
+          &--th {
+            font-size: 1.7rem;
+            padding: 0.5rem 0.4rem;
+            color: #5c5a5acf;
+          }
+        }
+      }
+      &--tbody {
+        &--tr {
+          &:first-child {
+            background-color: #f2dede;
+          }
+          &--td {
+            text-align: center;
+            font-size: 1.4rem;
+            padding: 0.6rem 0.4rem;
+            color: #666666f8;
+            input {
+              width: 5rem;
+              text-align: center;
+              font-size: 1.4rem;
+            }
+            i {
+              color: rgba(247, 97, 11, 0.849);
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    &--h3 {
+      display: flex;
+      justify-content: space-between;
+      background-color: #d9edf7;
+      font-weight: normal;
+      font-size: 1.5rem;
+      align-items: center;
+      padding: 0.5rem;
+      &--p {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px;
+        padding: 0.2rem 0.5rem;
+        &--span {
+          color: #333;
+          &.span-link {
+            color: #468dbc;
+            cursor: pointer;
+            &:hover {
+              color: #7fc7f7;
+            }
+          }
+        }
+      }
+    }
+    &--h4 {
+      display: flex;
+      justify-content: space-between;
+      background-color: #dff0d8;
+      font-weight: normal;
+      font-size: 1.5rem;
+      align-items: center;
+      padding: 0.5rem;
+      &--span {
+        color: #2e2e2e;
+        i {
+          margin-left: 0.6rem;
+          color: #468dbc;
+        }
+      }
+    }
+    &__sell-operation {
+      display: flex;
+      justify-content: space-between;
+      &--p {
+        width: 33%;
+        margin: 0rem;
+        &--button {
+          width: 100%;
+          font-size: 1.8rem;
+          text-transform: capitalize;
+          padding: 0.5rem;
+          border: none;
+          color: #fff;
+          &.button1 {
+            background-color: #f39c12;
+            border: 1px solid #e08e0b;
+          }
+          &.button2 {
+            background-color: #dd4b39;
+            border: 1px solid #d73925;
+          }
+          &.button3 {
+            background-color: #605ca8;
+            border: 1px solid #34316d;
+          }
+          &.button4 {
+            background-color: #001f3f;
+            border: 1px solid #01162b;
+          }
+          &.button5 {
+            background-color: #00a65a;
+            border: 1px solid #005e34;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+  &__right-side {
+    &__search {
+      display: flex;
+      justify-content: space-between;
+      &--input {
+        width: 100%;
+        font-size: 1.4rem;
+        padding: 1.4rem 1rem;
+        border: 1px solid #d2d6de;
+        display: inline-block;
+      }
+      &--a {
+        font-size: 1.7rem;
+        padding: 0.38rem 1rem;
+        background-color: #fff;
+        color: #3c8dbc;
+        border: 1px solid #d2d6de;
+        display: flex;
+        align-items: center;
+      }
+    }
+    &__products-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      &__box {
+        cursor: pointer;
+        width: 9rem;
+        height: auto;
+        margin: 0.5rem;
+        border: 1px solid #a5a5a9;
+        box-shadow: 1px 1px 3px #92929f;
+        padding: 0.3rem;
+        display: flex;
+        .mat-card {
+          padding: 0.4rem;
+          background-color: #ecf0f5;
+          box-shadow: none !important;
+          border-bottom: none;
+        }
+        &--img {
+          width: 100%;
+          height: 8rem;
+          object-fit: cover;
+        }
+        &--p {
+          font-weight: bold;
+          margin: 0rem;
+          color: #6e5757;
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+<div class="add-user">
+  <div class="my-container">
+    <div class="add-user__header">
+      <h3>Add User</h3>
+      <P>
+        <a routerLink="/"><i class="fa-solid fa-gauge"></i> home</a>
+        <span> > add user</span>
+      </P>
+    </div>
+    <div class="add-user__box-container">
+      <p>Please enter data of user you want to add </p>
+      <!-- start form to add user  -->
+      <form action="" #f="ngForm">
+        <div class="form-group">
+          <label> first name</label>
+          <input type="text" #first_name="ngModel" ngModel name="first_name" class="form-control" required minlength="3">
+          <p class="alert alert-danger" *ngIf="first_name.touched && first_name.errors?.['required']">first name is required</p>
+          <p class="alert alert-danger" *ngIf="first_name.touched && first_name.errors?.['minlength']">min Lnegth is 3 char</p>
+        </div>
+        <div class="form-group">
+          <label> last name</label>
+          <input type="text" #last_name="ngModel" ngModel name="last_name" class="form-control"  required minlength="3">
+          <p class="alert alert-danger" *ngIf="last_name.touched && last_name.errors?.['required']">lastName is required</p>
+          <p class="alert alert-danger" *ngIf="last_name.touched && last_name.errors?.['minlength']">min Lnegth is 3 char</p>
+        </div>
+        <div class="form-group">
+          <label> email</label>
+          <input type="text" #email="ngModel" ngModel name="email" class="form-control" email required >
+          <p class="alert alert-danger" *ngIf="email.touched && email.errors?.['required']">email is required</p>
+          <p class="alert alert-danger" *ngIf="email.touched && email.errors?.['email']">it must be email example@gamil.com</p>
+        </div>
+        <div class="form-group">
+          <label> address </label>
+          <input type="text" #address="ngModel" ngModel name="address" class="form-control" required minlength="3">
+          <p class="alert alert-danger" *ngIf="address.touched && address.errors?.['required']">address is required</p>
+          <p class="alert alert-danger" *ngIf="address.touched && address.errors?.['minlength']">min Lnegth is 3 char</p>
+        </div>
+        <div class="form-group">
+          <label> status </label>
+           <select class="form-select" aria-label="Default select example">
+          <option selected value="active">active</option>
+          <option value="Inactive">Inactive</option>
+        </select>
+
+        </div>
+
+       <div class="form-group">
+        <label> group </label>
+        <select class="form-select" aria-label="Default select example">
+          <option selected value="admin">admin</option>
+          <option value="staff">staff</option>
+          <option value="user">user</option>
+        </select>
+       </div>
+        <button (click)="save(f)" type="button" [disabled]="f.invalid" class="btn btn-success">ok</button>
+      </form>
+
+      <!-- end form add user  -->
+
+    </div>
+  </div>
+
+</div>

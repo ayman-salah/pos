@@ -1,0 +1,108 @@
+<div class="sidebar">
+
+  <ul>
+    <li (click)="link = 'dashboard';open_list('')" [ngClass]="{'active': link === 'dashboard'}"><a routerLink="/"><i class="fa-solid fa-gauge"></i>dashboard</a></li>
+    <li (click)="link = 'pos';open_list('')" [ngClass]="{'active': link === 'pos'}"><a routerLink="pos"><i class="fa-solid fa-table-cells"></i>pos</a></li>
+    <li (click)="link = 'products';open_list('products')" [ngClass]="{'active': link === 'products'}">
+      <a>
+        <i class="fa-solid fa-barcode"></i>
+          products
+        <i class="fa-solid fa-angle-left " [ngClass]="{'fa-angle-up': list_status === 'products' }"></i>
+      </a>
+      <ul [ngClass]="{'open-list': (link === 'products' && list_status === 'products')}">
+        <li ><a routerLink="listProducts">list products</a>
+        <li ><a routerLink="addproduct">add products</a>
+      </ul>
+    </li> <!-- end section of producst  -->
+    <!-- start section of sales  -->
+    <li (click)="link = 'sales';open_list('sales')" [ngClass]="{'active': link === 'sales'}">
+      <a>
+        <i class="fa-solid fa-folder"></i>
+        sales
+        <i class="fa-solid fa-angle-left arrow-icon" [ngClass]="{'fa-angle-up': list_status === 'sales' }"></i>
+      </a>
+      <ul [ngClass]="{'open-list': (link === 'sales' && list_status === 'sales')}">
+        <li ><a routerLink="listsales">list sales</a>
+        <li ><a routerLink="addsale">add sale</a>
+      </ul>
+    </li>
+    <!-- end section of sales -->
+    <!-- start section of purchases  -->
+    <li (click)="link = 'purchases';open_list('purchases')" [ngClass]="{'active': link === 'purchases'}">
+      <a>
+        <i class="fa-solid fa-folder"></i>
+        purchases
+        <i class="fa-solid fa-angle-left arrow-icon" [ngClass]="{'fa-angle-up': list_status === 'purchases' }"></i>
+      </a>
+      <ul [ngClass]="{'open-list': (link === 'purchases' && list_status === 'purchases')}">
+        <li ><a routerLink="listpurchases">list purchases</a>
+        <li ><a routerLink="addpurchase">add purchase</a>
+      </ul>
+    </li>
+    <!-- end section of sales -->
+    <!-- start section of categories  -->
+    <li (click)="link = 'categories';open_list('categories')" [ngClass]="{'active': link === 'categories'}">
+      <a>
+        <i class="fa-solid fa-folder"></i>
+        categories
+        <i class="fa-solid fa-angle-left arrow-icon" [ngClass]="{'fa-angle-up': list_status === 'categories' }"></i>
+      </a>
+      <ul [ngClass]="{'open-list': (link === 'categories' && list_status === 'categories')}">
+        <li ><a routerLink="listcategory">list category</a>
+        <li ><a routerLink="addcategory">add category</a>
+      </ul>
+    </li>
+    <!-- end section of categories -->
+    <!-- start section of gift card -->
+    <li (click)="link = 'gift card';open_list('gift card')" [ngClass]="{'active': link === 'gift card'}">
+      <a>
+        <i class="fa-solid fa-laptop"></i>
+        gift card
+        <i class="fa-solid fa-angle-left arrow-icon" [ngClass]="{'fa-angle-up': list_status === 'categories' }"></i>
+      </a>
+      <ul [ngClass]="{'open-list': (link === 'gift card' && list_status === 'gift card')}">
+        <li ><a routerLink="listGiftCard">list gift card</a></li>
+        <li ><a routerLink="addGiftCard">add gift card</a></li>
+      </ul>
+    </li> <!-- end section of gift card -->
+    <!-- start section of people -->
+    <li (click)="link = 'people';open_list('people')" [ngClass]="{'active': link === 'people'}">
+      <a>
+        <i class="fa-solid fa-users"></i>
+        people
+        <i class="fa-solid fa-angle-left arrow-icon" [ngClass]="{'fa-angle-up': list_status === 'people' }"></i>
+
+      </a>
+      <ul [ngClass]="{'open-list': (link === 'people' && list_status === 'people')}">
+        <li ><a routerLink="listusers">list users</a></li>
+        <li ><a routerLink="adduser">add user</a></li>
+        <mat-divider></mat-divider>
+        <li ><a routerLink="listcustomers">list customers</a></li>
+        <li ><a routerLink="addcustomer">add customer</a></li>
+        <mat-divider></mat-divider>
+        <li ><a routerLink="listsuppliers">list suppliers</a></li>
+        <li ><a routerLink="addsupplier">add supplier</a></li>
+      </ul>
+    </li> <!-- end section of people -->
+  <!-- start section of settings -->
+  <li (click)="link = 'settings';open_list('settings')" [ngClass]="{'active': link === 'settings'}">
+    <a>
+      <i class="fa-solid fa-gear"></i>
+      settings
+      <i class="fa-solid fa-angle-left arrow-icon" [ngClass]="{'fa-angle-up': list_status === 'settings' }"></i>
+    </a>
+    <ul [ngClass]="{'open-list': (link === 'settings' && list_status === 'settings')}">
+      <li ><a routerLink="stores">list stores</a></li>
+      <li ><a routerLink="addstores">add stores</a></li>
+      <mat-divider></mat-divider>
+
+    </ul>
+  </li> <!-- end section of settings  -->
+
+    <li (click)="link = 'reports'" [ngClass]="{'active': link === 'reports'}"><a routerLink=""><i class="fa-solid fa-chart-line"></i>reports</a></li>
+    <li (click)="link = 'logout'" [ngClass]="{'active': link === 'logout'}"><a routerLink="login"><i class="fa-solid fa-right-from-bracket"></i>logout</a></li>
+  </ul>
+
+
+
+</div>

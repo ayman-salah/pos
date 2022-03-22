@@ -1,0 +1,86 @@
+<div class="pos">
+  <div class="pos__invoic">
+    <table class="pos__invoic--table">
+      <thead  class="pos__invoic--table--thead">
+        <tr class="pos__invoic--table--thead--tr">
+          <th class="pos__invoic--table--thead--tr--th">product</th>
+          <th class="pos__invoic--table--thead--tr--th">price</th>
+          <th class="pos__invoic--table--thead--tr--th">Qty</th>
+          <th class="pos__invoic--table--thead--tr--th">subtotal</th>
+          <th class="pos__invoic--table--thead--tr--th"><i class="fa-solid fa-trash-can"></i></th>
+        </tr>
+      </thead>
+      <tbody class="pos__invoic--table--tbody">
+        <tr  class="pos__invoic--table--tbody--tr" *ngFor="let item of [].constructor(3)">
+          <td class="pos__invoic--table--tbody--tr--td">name product</td>
+          <td class="pos__invoic--table--tbody--tr--td">15.00</td>
+          <td class="pos__invoic--table--tbody--tr--td">
+            <input type="hidden"  value="2">
+            <input type="text"  class="form-control" value="1">
+
+          </td>
+          <td class="pos__invoic--table--tbody--tr--td">30.00</td>
+          <td class="pos__invoic--table--tbody--tr--td"><i class="fa-solid fa-trash-can"></i></td>
+        </tr>
+      </tbody>
+    </table>
+
+      <h3 class="pos__invoic--h3">
+        <p class="pos__invoic--h3--p">
+          <span class="pos__invoic--h3--p--span">total items</span>
+          <span class="pos__invoic--h3--p--span">2(8.00)</span>
+        </p>
+        <p class="pos__invoic--h3--p">
+          <span class="pos__invoic--h3--p--span">total </span>
+          <span class="pos__invoic--h3--p--span">2(8.00)</span>
+        </p>
+      </h3>
+      <h3 class="pos__invoic--h3">
+        <p class="pos__invoic--h3--p">
+          <span class="pos__invoic--h3--p--span span-link">discount</span>
+          <span class="pos__invoic--h3--p--span">2(8.00)</span>
+        </p>
+        <p class="pos__invoic--h3--p">
+          <span class="pos__invoic--h3--p--span span-link">order tax</span>
+          <span class="pos__invoic--h3--p--span">2(8.00)</span>
+        </p>
+      </h3>
+      <h4 class="pos__invoic--h4">
+          <span class="pos__invoic--h4--span">total payable<i class="fa-solid fa-comment"></i></span>
+          <span class="pos__invoic--h4--span">126.00</span>
+      </h4>
+      <div class="pos__invoic__sell-operation">
+          <p class="pos__invoic__sell-operation--p">
+            <button class="pos__invoic__sell-operation--p--button button1">hold</button><br>
+            <button  class="pos__invoic__sell-operation--p--button button2">cancel</button>
+          </p>
+          <p  class="pos__invoic__sell-operation--p">
+            <button  class="pos__invoic__sell-operation--p--button button3">print order</button><br>
+            <button  class="pos__invoic__sell-operation--p--button button4">print Bill</button>
+          </p>
+          <p  class="pos__invoic__sell-operation--p">
+            <button  class="pos__invoic__sell-operation--p--button button5">payment</button>
+          </p>
+      </div>
+
+
+     <p>This accordion uses customized default values.</p>
+
+
+  </div>
+  <div class="pos__right-side">
+    <div class="pos__right-side__search">
+      <input class="pos__right-side__search--input form-control" type="text" placeholder="Search  by code , name" >
+      <a routerLink="/addproduct" class="pos__right-side__search--a"><i class="fa-solid fa-circle-plus"></i></a>
+    </div>
+  <div class="pos__right-side__products-container">
+    <div class="pos__right-side__products-container__box"  *ngFor="let item of products">
+      <mat-card>
+        <img class="pos__right-side__products-container__box--img" src="{{item.image}}" alt="" srcset="">
+        <p class="pos__right-side__products-container__box--p">{{item.name}}</p>
+        <p class="pos__right-side__products-container__box--p">{{item.price}}</p>
+      </mat-card>
+    </div>
+  </div>
+</div>
+</div>
