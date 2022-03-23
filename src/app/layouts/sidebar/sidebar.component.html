@@ -14,32 +14,7 @@
         <li ><a routerLink="addproduct">add products</a>
       </ul>
     </li> <!-- end section of producst  -->
-    <!-- start section of sales  -->
-    <li (click)="link = 'sales';open_list('sales')" [ngClass]="{'active': link === 'sales'}">
-      <a>
-        <i class="fa-solid fa-folder"></i>
-        sales
-        <i class="fa-solid fa-angle-left arrow-icon" [ngClass]="{'fa-angle-up': list_status === 'sales' }"></i>
-      </a>
-      <ul [ngClass]="{'open-list': (link === 'sales' && list_status === 'sales')}">
-        <li ><a routerLink="listsales">list sales</a>
-        <li ><a routerLink="addsale">add sale</a>
-      </ul>
-    </li>
-    <!-- end section of sales -->
-    <!-- start section of purchases  -->
-    <li (click)="link = 'purchases';open_list('purchases')" [ngClass]="{'active': link === 'purchases'}">
-      <a>
-        <i class="fa-solid fa-folder"></i>
-        purchases
-        <i class="fa-solid fa-angle-left arrow-icon" [ngClass]="{'fa-angle-up': list_status === 'purchases' }"></i>
-      </a>
-      <ul [ngClass]="{'open-list': (link === 'purchases' && list_status === 'purchases')}">
-        <li ><a routerLink="listpurchases">list purchases</a>
-        <li ><a routerLink="addpurchase">add purchase</a>
-      </ul>
-    </li>
-    <!-- end section of sales -->
+
     <!-- start section of categories  -->
     <li (click)="link = 'categories';open_list('categories')" [ngClass]="{'active': link === 'categories'}">
       <a>

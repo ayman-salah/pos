@@ -5,5 +5,6 @@ export interface Users {
   address:string,
   email:string,
   status:boolean,
-  group:string
+  group:string,
+  actions:string
 }

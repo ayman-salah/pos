@@ -23,13 +23,14 @@ export class ListUsersComponent implements AfterViewInit {
     // this.dataSource.paginator = this.paginator
   }
   displayedColumns: string[] = [
+    'id',
     'firstname',
     'lastname',
     'address',
-    'group',
     'email',
+    'group',
     'status',
-    'id',
+    'actions',
   ];
   dataSource: any;
   value = '';
