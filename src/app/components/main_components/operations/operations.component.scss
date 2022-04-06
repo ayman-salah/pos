@@ -29,15 +29,12 @@
     &:hover{
       background-color: rgb(204, 202, 202);
     }
-    &:nth-child(2) {
-      color: #3f51b5;
-    }
-
-    &:nth-child(3) {
-      color: #e73b7f;
-    }
-    &:nth-child(4) {
-      color: #009688;
+    // colors of buttons operations
+    $colors: (2:#3f51b5,3:#e73b7f,4:#009688);
+    @each $index , $color  in $colors {
+      &:nth-child(#{$index}){
+        color: #{$color};
+      }
     }
     i {
       margin-right: 0.7rem;

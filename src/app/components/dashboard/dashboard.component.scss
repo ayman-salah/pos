@@ -4,24 +4,23 @@
     margin: auto;
   }
 
-
   &__content {
     background-color: #fff;
-  padding: 1rem;
-  width: 100%;
-  margin-bottom: 1.5rem;
-  border-top: 4px solid #428d4d;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+    padding: 1rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-top: 4px solid #428d4d;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+  }
+  &__charts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px,1fr));
+    grid-gap: 10px;
     .chart {
-      width: 39rem;
-      height: auto;
-      font-size: 1.2rem;
-      display: inline-block;
-      margin-right: 1rem;
       border: 1px solid #ddd;
       box-shadow: 1px 1px 3px #8594df;
     }
   }
 }
-

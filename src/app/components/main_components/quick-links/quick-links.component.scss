@@ -8,22 +8,15 @@
   }
   &__link-container {
     width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(100px,1fr));
+    gap: 10px;
     padding: 1.2rem;
-    @media (max-width:768px) {
-      justify-content: center;
-    }
     a {
-      width: 11rem;
       color: #000;
-      font-size: 1.5rem;
       border: 1px solid #d1d1d1;
-      margin: 0 0 1rem 1rem;
       text-align: center;
-      padding: 1.2rem;
+      padding: 14px;
       background-color: #ecf0f5;
       box-shadow: 1px 1px 3px #5ca5c14a;
       i{
