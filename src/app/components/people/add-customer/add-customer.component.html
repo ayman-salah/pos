@@ -1,13 +1,15 @@
 <div class="add-customer">
   <div class="my-container">
-    <div class="add-customer__header">
-      <h3>Add customer</h3>
-      <P>
-        <a routerLink="/"><i class="fa-solid fa-gauge"></i> home</a>
-        <span> > add customer</span>
-      </P>
-    </div>
+    <app-header
+    [tittle1]="'home'"
+    [tittle2]="'customers'"
+    [tittle3]="'add-customer'"
+    [link1]="'/'"
+    [link2]="'listcustomers'"
+    [link3]="'addcustomer'"
+    ></app-header>
     <div class="add-customer__box-container">
+      <app-quick-links></app-quick-links>
       <p>Please enter data of customer you want to add </p>
       <!-- start form to add customer  -->
       <form action="" #f="ngForm">

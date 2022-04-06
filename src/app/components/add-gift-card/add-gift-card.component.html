@@ -1,14 +1,15 @@
 <div class="gift-card">
   <div class="my-container">
-    <div class="gift-card__header">
-      <h3>categories</h3>
-      <P>
-        <a routerLink="/"><i class="fa-solid fa-gauge"></i> home</a>
-        <span> > add category</span>
-      </P>
-
-    </div>
+    <app-header
+    [tittle1]="'home'"
+    [tittle2]="'gift-cards'"
+    [tittle3]="'add-gift-card'"
+    [link1]="'/'"
+    [link2]="'listGiftCard'"
+    [link3]="'addGiftCard'"
+    ></app-header>
     <div class="gift-card__box-container">
+      <app-quick-links></app-quick-links>
       <p>Please enter data of category you want to add </p>
       <!-- start form to add category  -->
       <form>

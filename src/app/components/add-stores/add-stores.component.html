@@ -1,15 +1,16 @@
 <div class="add-stores">
   <div class="my-container">
-    <div class="add-stores__header">
-      <h3>Add stores</h3>
-      <P>
-        <a routerLink="/"><i class="fa-solid fa-gauge"></i> home</a>
-        <span> > add stores</span>
-      </P>
-    </div>
+    <app-header
+    [tittle1]="'home'"
+    [tittle2]="'stores'"
+    [tittle3]="'add-stores'"
+    [link1]="'/'"
+    [link2]="'stores'"
+    [link3]="'addstores'"
+    ></app-header>
     <div class="add-stores__box-container">
+      <app-quick-links></app-quick-links>
       <p>Please enter data of stores you want to add </p>
-      <!-- start form to add stores  -->
       <form action="" #f="ngForm">
         <div class="form-group">
           <label> name</label>

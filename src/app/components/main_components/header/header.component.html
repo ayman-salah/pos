@@ -1,0 +1,9 @@
+<div class="header">
+  <h3 *ngIf="tittle3 == ''">{{tittle2}}</h3>
+  <h3 *ngIf="tittle3 != ''">{{tittle3}}</h3>
+  <P>
+    <a routerLink="{{link1}}"><i class="fa-solid fa-gauge"></i> {{tittle1}} </a>
+    <a routerLink="/{{link2}}"><i class=""></i>> {{tittle2}} </a>
+    <a *ngIf="tittle3 != ''" routerLink="/{{link3}}"><i class=""></i>> {{tittle3}} </a>
+  </P>
+</div>

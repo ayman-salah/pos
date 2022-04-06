@@ -42,6 +42,10 @@ import { SalesComponent } from './components/sales/sales.component';
 import { PurchasesComponent } from './components/purchases/purchases.component';
 import { AddPurchasesComponent } from './components/add-purchases/add-purchases.component';
 import { AddSalesComponent } from './components/add-sales/add-sales.component';
+import { QuickLinksComponent } from './components/main_components/quick-links/quick-links.component';
+import { OperationsComponent } from './components/main_components/operations/operations.component';
+import { HeaderComponent } from './components/main_components/header/header.component';
+import { MainTableComponent } from './components/main_components/main-table/main-table.component';
 //==================
 
 @NgModule({
@@ -72,6 +76,10 @@ import { AddSalesComponent } from './components/add-sales/add-sales.component';
     PurchasesComponent,
     AddPurchasesComponent,
     AddSalesComponent,
+    QuickLinksComponent,
+    OperationsComponent,
+    HeaderComponent,
+    MainTableComponent,
   ],
   imports: [
     BrowserModule,

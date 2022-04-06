@@ -3,28 +3,6 @@
     width: 95%;
     margin: auto;
   }
-  &__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 0rem;
-    h3 {
-      font-size: 1.8rem;
-      font-weight: bold;
-    }
-    p {
-      font-size: 1.3rem;
-      font-weight: bold;
-      margin: 0rem;
-      color: #898989;
-      a {
-        color: #898989;
-      }
-      span {
-        // color: rgb(255, 0, 0);
-      }
-    }
-  }
   &__box-container {
     background-color: #fff;
     padding: 1rem;

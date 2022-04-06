@@ -1,19 +1,18 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit, ViewChild } from '@angular/core';
 import { GeneralServicesService } from 'src/app/services/general-services.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
 import { Subscription } from 'rxjs';
 import { interface_products } from 'src/app/intefaces/products';
-//=========== end imports
+
 @Component({
-  selector: 'app-list-products',
-  templateUrl: './list-products.component.html',
-  styleUrls: ['./list-products.component.scss']
+  selector: 'app-main-table',
+  templateUrl: './main-table.component.html',
+  styleUrls: ['./main-table.component.scss']
 })
 
-
-export class ListProductsComponent implements AfterViewInit {
+export class MainTableComponent implements AfterViewInit {
   value = ''; // this variable is used to show clear-button in input search field
   @ViewChild(MatPaginator) paginator: MatPaginator; // this viewchild for matpaginator
   @ViewChild(MatSort) sort: MatSort; // this viewchild for matsort
@@ -56,5 +55,3 @@ export class ListProductsComponent implements AfterViewInit {
     alert('لتفعيل هذه الميزة يجب شراء الموقع')
   }
 }
-
-

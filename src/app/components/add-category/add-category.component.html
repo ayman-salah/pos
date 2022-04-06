@@ -1,14 +1,15 @@
 <div class="add-cat">
   <div class="my-container">
-    <div class="add-cat__header">
-      <h3>categories</h3>
-      <P>
-        <a routerLink="/"><i class="fa-solid fa-gauge"></i> home</a>
-        <span> > add category</span>
-      </P>
-
-    </div>
+    <app-header
+    [tittle1]="'home'"
+    [tittle2]="'categories'"
+    [tittle3]="'add-category'"
+    [link1]="'/'"
+    [link2]="'listcategory'"
+    [link3]="'addcategory'"
+    ></app-header>
     <div class="add-cat__box-container">
+      <app-quick-links></app-quick-links>
       <p>Please enter data of category you want to add </p>
       <!-- start form to add category  -->
       <form>

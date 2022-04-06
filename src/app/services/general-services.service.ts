@@ -33,6 +33,7 @@ export class GeneralServicesService {
   // end ... get data of users
  // this method get all stores
  sotre_url = 'assets/json/stores.json'
+ test ='store';
  public getstores():Observable<interface_store[]>{
    return this.http.get<interface_store[]>(this.sotre_url)
  } //end method of stores && start method of customers

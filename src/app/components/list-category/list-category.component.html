@@ -1,51 +1,8 @@
 <div class="list-categories">
   <div class="my-container">
-    <div class="list-categories__header">
-      <h3>List categories</h3>
-      <P>
-        <a routerLink="/"><i class="fa-solid fa-gauge"></i> home</a>
-        <span> > list-categories</span>
-      </P>
-
-    </div>
+    <app-header [tittle1]="'home'" [tittle2]="'list-categories'" [link1]="'/'" [link2]="'listcategory'"></app-header>
     <div class="list-categories__box-container">
-      <h5>quick links</h5>
-
-      <div class="list-categories__box-container__link-container">
-        <a routerLink="/listProducts">
-          <i class="fa-solid fa-barcode"></i><br>
-          products
-        </a>
-        <a routerLink="/listcategory">
-          <i class="fa-solid fa-folder-open"></i><br>
-          categories
-        </a>
-
-        <a routerLink="/listGiftCard">
-          <i class="fa-solid fa-credit-card"></i><br>
-          gift card
-        </a>
-        <a routerLink="/listcustomers">
-          <i class="fa-solid fa-people-carry-box"></i><br>
-          customers
-        </a>
-        <a routerLink="/">
-          <i class="fa-solid fa-gear"></i><br>
-          settings
-        </a>
-        <a routerLink="/">
-          <i class="fa-solid fa-chart-line"></i><br>
-          reports
-        </a>
-        <a routerLink="/listusers">
-          <i class="fa-solid fa-users"></i><br>
-          users
-        </a>
-        <a routerLink="/">
-          <i class="fa-solid fa-database"></i><br>
-          backup
-        </a>
-      </div>
+      <app-quick-links></app-quick-links>
       <div class="list-categories__box-container__operations">
         <div class="mat-form-field">
           <mat-form-field appearance="standard">
@@ -56,12 +13,7 @@
             </button>
           </mat-form-field>
         </div>
-        <div class="example-button-row">
-          <button (click)="custome_message()" ><a><i class="fa-solid fa-copy"></i>Copy</a></button>
-          <button (click)="custome_message()" ><a><i class="fa-solid fa-file-excel"></i>Excel</a></button>
-          <button (click)="custome_message()" ><a><i class="fa-solid fa-file-csv"></i>Csv</a></button>
-          <button (click)="custome_message()" ><a><i class="fa-solid fa-file-pdf"></i>Pdf</a></button>
-        </div>
+        <app-operations></app-operations>
 
       </div>
       <div class="list-categories__box-container__table-content">
@@ -87,11 +39,11 @@
             </ng-container>
             <!-- actions Column -->
             <ng-container matColumnDef="actions">
-              <th mat-header-cell *matHeaderCellDef > action </th>
+              <th mat-header-cell *matHeaderCellDef> action </th>
               <td mat-cell *matCellDef="let row">
-                <a  class="delete"><i class="fa-solid fa-trash-can"></i></a>
-                <a  class="edit"><i class="fa-solid fa-pencil"></i></a>
-               </td>
+                <a class="delete"><i class="fa-solid fa-trash-can"></i></a>
+                <a class="edit"><i class="fa-solid fa-pencil"></i></a>
+              </td>
             </ng-container>
 
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

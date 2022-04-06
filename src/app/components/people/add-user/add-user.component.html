@@ -1,13 +1,15 @@
 <div class="add-user">
   <div class="my-container">
-    <div class="add-user__header">
-      <h3>Add User</h3>
-      <P>
-        <a routerLink="/"><i class="fa-solid fa-gauge"></i> home</a>
-        <span> > add user</span>
-      </P>
-    </div>
+    <app-header
+    [tittle1]="'home'"
+    [tittle2]="'users'"
+    [tittle3]="'add-user'"
+    [link1]="'/'"
+    [link2]="'listusers'"
+    [link3]="'adduser'"
+    ></app-header>
     <div class="add-user__box-container">
+      <app-quick-links></app-quick-links>
       <p>Please enter data of user you want to add </p>
       <!-- start form to add user  -->
       <form action="" #f="ngForm">

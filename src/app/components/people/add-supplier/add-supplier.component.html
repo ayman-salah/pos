@@ -1,13 +1,15 @@
 <div class="add-supplier">
   <div class="my-container">
-    <div class="add-supplier__header">
-      <h3>Add supplier</h3>
-      <P>
-        <a routerLink="/"><i class="fa-solid fa-gauge"></i> home</a>
-        <span> > add supplier</span>
-      </P>
-    </div>
+    <app-header
+    [tittle1]="'home'"
+    [tittle2]="'suppliers'"
+    [tittle3]="'add-supplier'"
+    [link1]="'/'"
+    [link2]="'listsuppliers'"
+    [link3]="'addsupplier'"
+    ></app-header>
     <div class="add-supplier__box-container">
+      <app-quick-links></app-quick-links>
       <p>Please enter data of supplier you want to add </p>
       <!-- start form to add supplier  -->
       <form action="" #f="ngForm">

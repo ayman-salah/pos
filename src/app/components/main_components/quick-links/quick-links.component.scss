@@ -1,0 +1,35 @@
+.quick-links {
+  box-shadow: 0px 0px 2px #998e8e;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  &__link-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1.2rem;
+    @media (max-width:768px) {
+      justify-content: center;
+    }
+    a {
+      width: 11rem;
+      color: #000;
+      font-size: 1.5rem;
+      border: 1px solid #d1d1d1;
+      margin: 0 0 1rem 1rem;
+      text-align: center;
+      padding: 1.2rem;
+      background-color: #ecf0f5;
+      box-shadow: 1px 1px 3px #5ca5c14a;
+      i{
+        display: block;
+      }
+    }
+  }
+
+}

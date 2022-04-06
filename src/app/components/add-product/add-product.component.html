@@ -1,46 +1,46 @@
 <div class="add-product">
   <div class="my-container">
-    <div class="add-product__header">
-      <h3>products</h3>
-      <P>
-        <a routerLink="/"><i class="fa-solid fa-gauge"></i>home > </a>
-        <a routerLink="/listProducts">products > </a>
-        <a routerLink="/addproduct">add product</a>
-
-      </P>
-
-    </div>
+    <app-header [tittle1]="'home'" [tittle2]="'product'" [tittle3]="'add-product'" [link1]="'/'"
+      [link2]="'listProducts'" [link3]="'addproduct'"></app-header>
     <div class="add-product__box-container">
+      <app-quick-links></app-quick-links>
       <p>Please enter data of product you want to add </p>
-
-      <!-- start form to add product  -->
       <form #f="ngForm">
         <div class="form-group">
           <label for="exampleFormControlInput1">product name</label>
-          <input ngModel name="pro_name" #pro_name = "ngModel" type="text" class="form-control" placeholder="product name" required minlength="5">
-          <p class="alert alert-danger" *ngIf="pro_name.touched && pro_name.errors?.['required']">product name is required </p>
+          <input ngModel name="pro_name" #pro_name="ngModel" type="text" class="form-control" placeholder="product name"
+            required minlength="5">
+          <p class="alert alert-danger" *ngIf="pro_name.touched && pro_name.errors?.['required']">product name is
+            required </p>
         </div>
         <div class="form-group">
           <label for="exampleFormControlInput1">category</label>
-          <input ngModel name="pro_cat" #pro_cat = 'ngModel' type="text" class="form-control"  placeholder="category name" required minlength="3">
-          <p class="alert alert-danger" *ngIf="pro_cat.touched  && pro_cat.errors?.['required'] ">category is required </p>
-          <p class="alert alert-danger" *ngIf="pro_cat.touched  && pro_cat.errors?.['minlength'] ">min length is 3 charachters</p>
+          <input ngModel name="pro_cat" #pro_cat='ngModel' type="text" class="form-control" placeholder="category name"
+            required minlength="3">
+          <p class="alert alert-danger" *ngIf="pro_cat.touched  && pro_cat.errors?.['required'] ">category is required
+          </p>
+          <p class="alert alert-danger" *ngIf="pro_cat.touched  && pro_cat.errors?.['minlength'] ">min length is 3
+            charachters</p>
         </div>
         <div class="form-group">
           <label for="exampleFormControlInput1">Qty</label>
-          <input ngModel name="pro_Qty" #qty = 'ngModel' type="number" class="form-control"  placeholder="Quantity" required  >
+          <input ngModel name="pro_Qty" #qty='ngModel' type="number" class="form-control" placeholder="Quantity"
+            required>
           <p class="alert alert-danger" *ngIf="qty.touched && qty.errors?.['required']">qtyl is required</p>
         </div>
         <div class="form-group">
           <label for="exampleFormControlInput1">cost</label>
-          <input ngModel name="pro_cost" #cost = "ngModel" type="number" class="form-control"  placeholder="product cost" required>
+          <input ngModel name="pro_cost" #cost="ngModel" type="number" class="form-control" placeholder="product cost"
+            required>
           <p class="alret alert-danger" *ngIf="cost.touched &&  cost.errors?.['required']">cost required</p>
         </div>
         <div class="form-group">
           <label for="exampleFormControlInput1">price</label>
-          <input ngModel name="pro_price" #price = "ngModel" type="number" class="form-control"  placeholder="product price" required >
-          <p class="alert alert-danger" *ngIf="price.touched &&  price.value < cost.value">يجب أن يكون سعر البيع أكبر من سعر الشراء </p>
-          <p class="alert alert-danger" *ngIf="price.touched &&  price.errors?.['required']">price is required  </p>
+          <input ngModel name="pro_price" #price="ngModel" type="number" class="form-control"
+            placeholder="product price" required>
+          <p class="alert alert-danger" *ngIf="price.touched &&  price.value < cost.value">يجب أن يكون سعر البيع أكبر من
+            سعر الشراء </p>
+          <p class="alert alert-danger" *ngIf="price.touched &&  price.errors?.['required']">price is required </p>
         </div>
 
         <div class="form-group">
